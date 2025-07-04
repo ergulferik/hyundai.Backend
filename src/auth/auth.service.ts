@@ -63,6 +63,8 @@ export class AuthService {
     });
     await logoutLog.save();
 
+    await this.mailService.sendLogoutMail(logoutLog);
+
     return {
       success: true,
       data: logoutLog
