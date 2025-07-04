@@ -19,7 +19,7 @@ export class AuthService {
       currentLocation: loginDto.currentLocation,
       qrData: loginDto.qrData,
       ipAddress,
-      loginTime: new Date(),
+      loginTime: new Date().toLocaleString('tr-TR'),
       success: true,
       action: 'login'
     });
@@ -57,7 +57,7 @@ export class AuthService {
       currentLocation: lastLogin.currentLocation, // Son bilinen konumu kullan
       qrData: lastLogin.qrData,
       ipAddress: lastLogin.ipAddress,
-      loginTime: new Date(),
+      loginTime: new Date().toLocaleString('tr-TR'),
       success: true,
       action: 'logout'
     });
